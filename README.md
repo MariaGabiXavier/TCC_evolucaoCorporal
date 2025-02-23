@@ -1,9 +1,9 @@
-# Trabalho de Conclusão de Curso - 2023
+# 🎓 Trabalho de Conclusão de Curso - 2023
 
 desenvolvimento de software para promover bem-estar físico e auxiliar na evolução corporal.
 
 ---
-## Tecnologias Usadas:
+## 🛠 Tecnologias Usadas:
 -HTML
 
 -PHP
