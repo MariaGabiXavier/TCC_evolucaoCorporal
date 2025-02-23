@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tela de login</title>
+    <style type="text/css">
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: rgb(233, 185, 255);
+        }
+        
+        .box {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(205, 167, 248, 0.4);
+            padding: 15px;
+            border-radius: 15px;
+        }
+        
+        fieldset {
+            border: 2px solid darkviolet;
+        }
+        
+        legend {
+            border: 1px solid rgba(180, 48, 180, 0.74);
+            padding: 10px;
+            background-color: darkviolet;
+            text-align: center;
+            border-radius: 5px;
+        }
+        
+        .inputBox {
+            position: relative;
+        }
+        
+        .inputUser {
+            background: none;
+            border: none;
+            border-bottom: 1px solid white;
+            outline: none;
+            color: whitesmoke;
+            font-size: 15px;
+            letter-spacing: 2px;
+        }
+        
+        .labelInput {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            pointer-events: none;
+            transition: .5s;
+        }
+        
+        .inputUser:focus~.labelInput,
+        .inputUser:valid~.labelInput {
+            top: -20px;
+            font-size: 12px;
+            color: darkviolet;
+        }
+        
+        button {
+            background-color: darkviolet;
+            border: none;
+            padding: 15px;
+            width: 100%;
+            border-radius: 10px;
+            color: white;
+            font-size: 15px;
+            cursor: pointer;
+        }
+        
+        ul {
+            display: flex;
+            justify-content: space-between;
+            list-style-type: none;
+            align-items: center;
+            padding: 12px;
+        }
+        
+        nav a:hover {
+            color: blueviolet;
+        }
+        
+        a {
+            color: rgb(255, 255, 255);
+            text-decoration: double;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <nav>
+            <ul>
+                <li>
+                    <a href="telaprincipal.html">Sobre sistema</a>
+                </li>
+                <li>
+                    <a href="sobr_progra.html">Sobre Programador</a>
+                </li>
+                <li>
+                    <a href="entrar.html">Entrar</a>
+                </li>
+                <li>
+                    <a href="cadastrar.html">Cadastrar</a>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="box">
+            <form action="">
+                <fieldset>
+                    <legend><b>Login</b></legend>
+                    <br>
+                    <div class="inputBox">
+                        <input type="text" name="login" id="login" class="inputUser" required>
+                        <label for="login" class="labelInput"><b>Nome Completo</b></label>
+                    </div>
+                    <br><br>
+                    <div class="inputBox">
+                        <input type="password" name="senha" id="senha" class="inputUser" required>
+                        <label for="senha" class="labelInput"><b>Senha</b></label>
+                    </div>
+                    <br><br>
+                    <div class="button">
+                        <button input type="submit" name="submit" id="submit">ENTRAR</button>
+
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+
+
+
+
+</body>
+
+</html>

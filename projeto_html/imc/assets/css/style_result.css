@@ -1,0 +1,35 @@
+body {
+    color: rgb(255, 255, 255);
+    background-color: rgb(131, 149, 228);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+ul {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    align-items: center;
+    padding: 12px;
+}
+
+a {
+    color: rgb(255, 255, 255);
+    text-decoration: double;
+}
+
+img {
+    width: 450px;
+    height: 450px;
+}
+
+.center {
+    text-align: center;
+}
+
+.container {
+    padding: 0px 50px;
+}
+
+nav a:hover {
+    color: blueviolet;
+}

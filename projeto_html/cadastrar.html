@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+
+    <script>
+        function confereSenha() {
+            const senha = document.querySelector('input[name=senha]');
+            const confirma = document.querySelector('input[name=confirma]');
+
+            if (confirma.value === senha.value) {
+                confirma.setCustomValidity('');
+            } else {
+                confirma.setCustomValidity('As senhas não conferem');
+            }
+        }
+
+        function senhaOK() {
+            alert("Senhas conferem")
+        }
+    </script>
+
+
+
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: rgb(233, 185, 255);
+        }
+        
+        .box {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(205, 167, 248, 0.4);
+            padding: 15px;
+            border-radius: 15px;
+        }
+        
+        fieldset {
+            border: 2px solid darkviolet;
+        }
+        
+        legend {
+            border: 1px solid rgba(180, 48, 180, 0.74);
+            padding: 10px;
+            background-color: darkviolet;
+            text-align: center;
+            border-radius: 5px;
+        }
+        
+        .inputBox {
+            position: relative;
+        }
+        
+        .inputUser {
+            background: none;
+            border: none;
+            border-bottom: 1px solid white;
+            outline: none;
+            color: whitesmoke;
+            font-size: 15px;
+            letter-spacing: 2px;
+        }
+        
+        .labelInput {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            pointer-events: none;
+            transition: .5s;
+        }
+        
+        .inputUser:focus~.labelInput,
+        .inputUser:valid~.labelInput {
+            top: -20px;
+            font-size: 12px;
+            color: darkviolet;
+        }
+        
+        button {
+            background-color: darkviolet;
+            border: none;
+            padding: 15px;
+            width: 100%;
+            border-radius: 10px;
+            color: white;
+            font-size: 15px;
+            cursor: pointer;
+        }
+        
+        ul {
+            display: flex;
+            justify-content: space-between;
+            list-style-type: none;
+            align-items: center;
+            padding: 12px;
+        }
+        
+        .container {
+            padding: 0px 50px;
+        }
+        
+        nav a:hover {
+            color: blueviolet;
+        }
+        
+        a {
+            color: rgb(255, 255, 255);
+            text-decoration: double;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <nav>
+            <ul>
+                <li>
+                    <a href="telaprincipal.html">Sobre sistema</a>
+                </li>
+                <li>
+                    <a href="sobr_progra.html">Sobre Programador</a>
+                </li>
+                <li>
+                    <a href="entrar.html">Entrar</a>
+                </li>
+                <li>
+                    <a href="cadastrar.html">Cadastrar</a>
+                </li>
+            </ul>
+        </nav>
+
+
+        <div class="box">
+            <form action="envia.php" onsubmit="senhaOK();" method="POST" accept-charset="UTF-8">
+                <fieldset>
+                    <legend><b>Cadastro</b></legend>
+                    <br>
+                    <div class="inputBox">
+                        <input type="text" name="nome" id="nome" class="inputUser" required>
+                        <label for="nome" class="labelInput"><b>Nome Completo</b></label>
+                    </div>
+                    <br><br>
+                    <div class="inputBox">
+                        <input type="text" name="email" id="email" class="inputUser" required>
+                        <label for="email" class="labelInput"><b>Email</b></label>
+                    </div>
+                    <br><br>
+                    <div class="inputBox">
+                        <input type="tel" name="Telefone" id="Telefone" class="inputUser" required>
+                        <label for="Telefone" class="labelInput"><b>Telefone</b></label>
+                    </div>
+                    <br><br>
+                    <p><b>Sexo:</b></p>
+                    <input type="radio" id="feminino" name="genero" value="feminino" required>
+                    <label for="feminino">Feminino</label>
+                    <input type="radio" id="masculino" name="genero" value="masculino" required>
+                    <label for="masculino">Masculino</label>
+
+                    <br><br>
+                    <div class="inputBox">
+                        <label for="dt_bascimento"><b>Data de Nascimento</b></label>
+                        <input type="date" name="dt_bascimento" id="dt_bascimento" class="inputUser" required>
+                        <br><br>
+                        <br>
+                        <div class="inputBox">
+
+                            <input type="text" name="Endereço" id="Endereço" class="inputUser" required>
+                            <label for="Endereço" class="labelInput"><b> Endereço</b></label>
+                            <br><br>
+                            <br>
+                            <div class="inputBox">
+
+                                <input type="text" name="Cidade" id="Cidade" class="inputUser" required>
+                                <label for="Cidade" class="labelInput"><b>Cidade</b></label>
+                                <br><br>
+                                <br>
+                                <div class="inputBox">
+
+                                    <input type="text" name="Estado" id="Estado" class="inputUser" required>
+                                    <label for="Estado" class="labelInput"><b>Estado</b></label>
+                                    <br><br><br>
+                                    <div class="inputBox">
+                                        <input type="password" name="senha" id="senha" class="inputUser" required onchange="confereSenha();">
+                                        <label for="senha" class="labelInput"><b>Senha</b></label>
+
+                                        <br><br><br>
+                                        <div class="inputBox">
+                                            <input type="password" name="confirma" id="senha" class="inputUser" required onchange="confereSenha();">
+                                            <label for="senha" class="labelInput"><b>Confirme a Senha</b></label>
+
+                                            <br><br>
+                                            <div class="button">
+                                                <button input type="submit" name="submit" id="submit">ENVIAR</button>
+
+                                            </div>
+                </fieldset>
+            </form>
+            </div>
+
+
+
+</body>
+
+</html>
